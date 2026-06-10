@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guilherme Iuri de Barros — CTO & Full-Stack Software Engineer | React, TypeScript, Node.js</title>
+<meta name="description" content="Guilherme Iuri de Barros is a CTO and full-stack software engineer in Curitiba, Brazil. 6+ years building real-time logistics platforms, event-driven microservices, Web3 on Solana and machine learning projects with React, TypeScript, Node.js and Go. MBA in Software Engineering at USP. Open to remote and international opportunities." />
+<meta name="author" content="Guilherme Iuri de Barros" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#04060F" />
+<link rel="canonical" href="https://tesserato.space/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Guilherme Iuri de Barros — CTO & Full-Stack Software Engineer" />
+<meta property="og:description" content="CTO and full-stack engineer. Real-time logistics platforms, event-driven microservices, Web3 on Solana and machine learning. React, TypeScript, Node.js, Go. MBA in Software Engineering at USP." />
+<meta property="og:url" content="https://tesserato.space/" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/71740621?v=4" />
+<meta property="og:image:alt" content="Guilherme Iuri de Barros" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Guilherme Iuri de Barros — Portfolio" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Guilherme Iuri de Barros — CTO & Full-Stack Software Engineer" />
+<meta name="twitter:description" content="CTO and full-stack engineer. Real-time logistics, event-driven microservices, Web3 and ML. React, TypeScript, Node.js, Go." />
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71740621?v=4" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Guilherme Iuri de Barros",
+  "url": "https://tesserato.space/",
+  "image": "https://avatars.githubusercontent.com/u/71740621?v=4",
+  "jobTitle": "CTO & Software Engineer",
+  "worksFor": { "@type": "Organization", "name": "Carga Online Tecnologia" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universidade de São Paulo (USP/ESALQ)" },
+    { "@type": "CollegeOrUniversity", "name": "Universidade Cruzeiro do Sul" }
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
+  "email": "mailto:guilherme@tesserato.space",
+  "knowsAbout": ["React", "TypeScript", "Node.js", "Go", "Software Architecture", "Event-driven Microservices", "Machine Learning", "Web3", "Solana", "Engineering Leadership", "PostgreSQL", "React Native"],
+  "sameAs": [
+    "https://github.com/guiliuri13",
+    "https://www.linkedin.com/in/guilherme-iuri-de-barros/"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#04060F;
+  --nebula:#0C1326;
+  --nebula-2:#131C3A;
+  --pulsar:#8B7CFF;
+  --pulsar-dim:rgba(139,124,255,.16);
+  --gold:#F5C76A;
+  --ion:#6FE7DD;
+  --starlight:#EAF0FF;
+  --muted:#8E9AC0;
+  --line:rgba(142,154,192,.18);
+  --display:'Unbounded',sans-serif;
+  --body:'Space Grotesk',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--void);
+  color:var(--starlight);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+::selection{background:var(--pulsar);color:var(--void)}
+
+/* ---------- canvas + atmosphere ---------- */
+#cosmos{position:fixed;inset:0;z-index:0;display:block}
+.aurora{
+  position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(60vw 50vh at 80% -10%, rgba(139,124,255,.13), transparent 60%),
+    radial-gradient(50vw 40vh at 5% 35%, rgba(111,231,221,.06), transparent 60%),
+    radial-gradient(70vw 60vh at 50% 110%, rgba(245,199,106,.05), transparent 60%);
+}
+main{position:relative;z-index:2}
+
+/* ---------- trajectory / progress ---------- */
+#trajectory{position:fixed;top:0;left:0;height:2px;width:0%;z-index:50;
+  background:linear-gradient(90deg,var(--ion),var(--pulsar),var(--gold));
+  box-shadow:0 0 12px rgba(139,124,255,.8);}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:40;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.1rem clamp(1.2rem,4vw,3rem);
+  backdrop-filter:blur(10px);
+  background:linear-gradient(180deg,rgba(4,6,15,.85),rgba(4,6,15,.0));}
+nav .sign{font-family:var(--mono);font-size:.8rem;letter-spacing:.18em;color:var(--muted)}
+nav .sign b{color:var(--pulsar);font-weight:600}
+nav ul{display:flex;gap:clamp(.9rem,2.4vw,1.9rem);list-style:none}
+nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color .3s}
+nav a:hover,nav a:focus-visible{color:var(--starlight)}
+nav a:focus-visible{outline:1px solid var(--pulsar);outline-offset:4px}
+@media(max-width:760px){nav ul{display:none}}
+
+/* ---------- shared section shell ---------- */
+section{padding:clamp(6rem,12vh,9rem) clamp(1.4rem,6vw,7rem);max-width:1280px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--ion);display:flex;align-items:center;gap:.8rem;margin-bottom:1.6rem}
+.eyebrow::before{content:'';width:38px;height:1px;background:var(--ion);display:inline-block}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(1.7rem,4vw,2.8rem);
+  letter-spacing:-.01em;line-height:1.15;margin-bottom:2.6rem}
+h2 .dim{color:var(--muted);font-weight:300}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.12s}
+.reveal[data-delay="2"]{transition-delay:.24s}
+.reveal[data-delay="3"]{transition-delay:.36s}
+
+/* ---------- hero ---------- */
+header.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding:7rem clamp(1.4rem,6vw,7rem) 4rem;max-width:1280px;margin:0 auto;position:relative}
+.hero .coords{font-family:var(--mono);font-size:.78rem;color:var(--muted);letter-spacing:.14em;margin-bottom:2rem}
+.hero .coords .blink{color:var(--gold);animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.15}}
+.hero h1{font-family:var(--display);font-weight:700;
+  font-size:clamp(2.3rem,7.2vw,5.6rem);line-height:1.02;letter-spacing:-.02em}
+.hero h1 .grad{background:linear-gradient(95deg,var(--starlight) 10%,var(--pulsar) 55%,var(--ion) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .role{margin-top:1.8rem;max-width:48ch;font-size:clamp(1rem,1.6vw,1.2rem);color:var(--muted)}
+.hero .role b{color:var(--starlight);font-weight:500}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:3rem}
+.btn{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:.95rem 1.7rem;border-radius:999px;text-decoration:none;transition:transform .35s,box-shadow .35s,background .35s;
+  display:inline-flex;align-items:center;gap:.6rem}
+.btn.primary{background:linear-gradient(95deg,var(--pulsar),#6a5df0);color:#0a0820;font-weight:600;
+  box-shadow:0 0 28px rgba(139,124,255,.35)}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 6px 40px rgba(139,124,255,.55)}
+.btn.ghost{border:1px solid var(--line);color:var(--starlight)}
+.btn.ghost:hover{transform:translateY(-3px);background:rgba(139,124,255,.08);border-color:var(--pulsar)}
+.btn:focus-visible{outline:2px solid var(--ion);outline-offset:3px}
+.scroll-hint{position:absolute;bottom:2.2rem;left:clamp(1.4rem,6vw,7rem);
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;
+  display:flex;align-items:center;gap:.9rem}
+.scroll-hint .pulse-line{width:1px;height:44px;background:linear-gradient(var(--pulsar),transparent);
+  animation:fall 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes fall{0%{transform:scaleY(0)}55%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* hero side telemetry */
+.telemetry{position:absolute;right:clamp(1.4rem,6vw,7rem);top:50%;transform:translateY(-50%);
+  font-family:var(--mono);font-size:.66rem;color:var(--muted);letter-spacing:.12em;
+  display:flex;flex-direction:column;gap:.55rem;text-align:right}
+.telemetry span b{color:var(--ion);font-weight:400}
+@media(max-width:900px){.telemetry{display:none}}
+
+/* ---------- mission profile (about) ---------- */
+.profile-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+@media(max-width:900px){.profile-grid{grid-template-columns:1fr}}
+.profile-grid p{color:var(--muted);margin-bottom:1.2rem;max-width:60ch}
+.profile-grid p b{color:var(--starlight);font-weight:500}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.stat{background:rgba(12,19,38,.7);padding:1.6rem 1.4rem;backdrop-filter:blur(6px)}
+.stat .num{font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--starlight)}
+.stat .num em{color:var(--pulsar);font-style:normal}
+.stat .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+
+/* ---------- spectrum (skills) ---------- */
+.spectrum-wrap{border:1px solid var(--line);border-radius:18px;background:rgba(12,19,38,.55);
+  backdrop-filter:blur(8px);padding:clamp(1.4rem,3.5vw,2.8rem);overflow:hidden;position:relative}
+.spectrum-wrap::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(142,154,192,.05) 79px 80px)}
+.band{margin-bottom:2.2rem}
+.band:last-child{margin-bottom:0}
+.band .band-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:1rem;display:flex;justify-content:space-between}
+.band .band-label .nm{color:var(--gold)}
+.lines{display:flex;flex-wrap:wrap;gap:.6rem}
+.sline{position:relative;font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;
+  padding:.55rem .95rem .55rem 1.5rem;border-radius:8px;border:1px solid var(--line);
+  color:var(--starlight);background:rgba(4,6,15,.4);
+  opacity:0;transform:translateX(-14px);transition:opacity .7s,transform .7s,border-color .3s, box-shadow .3s}
+.sline::before{content:'';position:absolute;left:.7rem;top:50%;transform:translateY(-50%);
+  width:3px;height:60%;border-radius:2px;background:var(--c,var(--pulsar));
+  box-shadow:0 0 10px var(--c,var(--pulsar))}
+.sline.in{opacity:1;transform:none}
+.sline:hover{border-color:var(--c,var(--pulsar));box-shadow:0 0 18px color-mix(in srgb,var(--c,var(--pulsar)) 35%,transparent)}
+
+/* ---------- missions (experience) ---------- */
+.missions{position:relative;padding-left:clamp(1.6rem,4vw,3rem)}
+.missions::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;
+  background:linear-gradient(var(--ion),var(--pulsar),transparent)}
+.mission{position:relative;margin-bottom:3.2rem;max-width:760px}
+.mission::before{content:'';position:absolute;left:calc(-1*clamp(1.6rem,4vw,3rem) + 1px);top:.55rem;
+  width:11px;height:11px;border-radius:50%;background:var(--void);
+  border:2px solid var(--pulsar);box-shadow:0 0 14px rgba(139,124,255,.8)}
+.mission .when{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+.mission h3{font-family:var(--display);font-weight:500;font-size:clamp(1.1rem,2.2vw,1.45rem);margin:.5rem 0 .2rem}
+.mission .org{font-family:var(--mono);font-size:.78rem;color:var(--ion);letter-spacing:.1em;margin-bottom:.9rem}
+.mission p{color:var(--muted);max-width:62ch;margin-bottom:.7rem}
+.mission p b{color:var(--starlight);font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.8rem}
+.tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:.28rem .7rem}
+
+/* ---------- mission control (leadership) ---------- */
+.control-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.panel{border:1px solid var(--line);border-radius:16px;padding:1.8rem 1.6rem;
+  background:linear-gradient(160deg,rgba(19,28,58,.7),rgba(12,19,38,.4));position:relative;overflow:hidden;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s}
+.panel:hover{transform:translateY(-5px);border-color:rgba(245,199,106,.5)}
+.panel .orbit-ico{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);
+  position:relative;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center}
+.panel .orbit-ico::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 10px var(--gold);top:-4px;left:50%;margin-left:-3.5px;
+  animation:orbit 5s linear infinite;transform-origin:3.5px 26px}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.panel .orbit-ico span{font-family:var(--mono);font-size:.72rem;color:var(--gold)}
+.panel h3{font-family:var(--display);font-weight:500;font-size:1.02rem;margin-bottom:.7rem;letter-spacing:.01em}
+.panel p{font-size:.92rem;color:var(--muted)}
+.panel p b{color:var(--starlight);font-weight:500}
+
+/* ---------- academy ---------- */
+.academy-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.2rem;align-items:stretch}
+@media(max-width:860px){.academy-grid{grid-template-columns:1fr}}
+.acad{border:1px solid var(--line);border-radius:18px;padding:2rem 1.8rem;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(19,28,58,.75),rgba(12,19,38,.45))}
+.acad.flagship{border-color:rgba(139,124,255,.45);box-shadow:0 0 60px rgba(139,124,255,.12) inset}
+.acad .lvl{font-family:var(--mono);font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.acad h3{font-family:var(--display);font-weight:500;font-size:clamp(1.05rem,2vw,1.4rem);margin:.7rem 0 .3rem}
+.acad .inst{font-family:var(--mono);font-size:.76rem;color:var(--ion);letter-spacing:.1em;margin-bottom:.9rem}
+.acad p{font-size:.92rem;color:var(--muted)}
+.acad p b{color:var(--starlight);font-weight:500}
+.acad .honor{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+  border:1px solid rgba(245,199,106,.4);border-radius:999px;padding:.4rem .9rem}
+.acad .honor::before{content:'✦'}
+.acad-side{display:flex;flex-direction:column;gap:1.2rem}
+.acad-side .acad{flex:1}
+.cert-link{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;color:var(--ion);text-decoration:none;
+  border-bottom:1px solid var(--line);padding-bottom:.15rem;transition:border-color .3s}
+.cert-link:hover{border-color:var(--ion)}
+
+/* ---------- transmissions (projects) ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem}
+.card{position:relative;border:1px solid var(--line);border-radius:16px;padding:1.7rem 1.5rem;
+  background:linear-gradient(160deg,rgba(19,28,58,.75),rgba(12,19,38,.45));
+  text-decoration:none;color:inherit;overflow:hidden;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s,box-shadow .45s;will-change:transform}
+.card::after{content:'';position:absolute;inset:0;opacity:0;transition:opacity .45s;pointer-events:none;
+  background:radial-gradient(420px 260px at var(--mx,50%) var(--my,50%),rgba(139,124,255,.16),transparent 65%)}
+.card:hover{transform:translateY(-6px);border-color:rgba(139,124,255,.55);box-shadow:0 18px 50px rgba(4,6,15,.7)}
+.card:hover::after{opacity:1}
+.card .id{font-family:var(--mono);font-size:.64rem;letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
+.card h3{font-family:var(--display);font-weight:500;font-size:1.06rem;margin:.7rem 0 .6rem;letter-spacing:.01em}
+.card p{font-size:.92rem;color:var(--muted)}
+.card .lang{font-family:var(--mono);font-size:.66rem;color:var(--ion);margin-top:1.1rem;display:flex;align-items:center;gap:.5rem}
+.card .lang::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--ion);box-shadow:0 0 8px var(--ion)}
+.gh-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 2rem}
+.badge{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;color:var(--starlight);
+  border:1px solid var(--line);border-radius:999px;padding:.35rem .85rem;background:rgba(12,19,38,.6)}
+.badge b{color:var(--gold);font-weight:600}
+.all-signals{display:block;margin-top:1.8rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.all-signals:hover{color:var(--starlight)}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding-bottom:8rem}
+.contact h2{margin-bottom:1rem}
+.contact .sub{color:var(--muted);max-width:50ch;margin:0 auto 2.6rem}
+.contact .mail{font-family:var(--display);font-weight:500;font-size:clamp(1.05rem,3.2vw,1.9rem);
+  text-decoration:none;letter-spacing:.01em;
+  background:linear-gradient(95deg,var(--ion),var(--pulsar),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  border-bottom:1px solid var(--line);padding-bottom:.4rem;transition:border-color .3s}
+.contact .mail:hover{border-color:var(--pulsar)}
+.contact .links{display:flex;justify-content:center;gap:1rem;margin-top:2.8rem;flex-wrap:wrap}
+footer{position:relative;z-index:2;text-align:center;padding:2.4rem 1rem;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;color:var(--muted)}
+footer b{color:var(--pulsar);font-weight:400}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+  .sline{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<canvas id="cosmos" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"></div>
+<div id="trajectory" aria-hidden="true"></div>
+
+<nav>
+  <div class="sign">// CALL SIGN: <b>GUILIURI13</b></div>
+  <ul>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#spectrum">Spectrum</a></li>
+    <li><a href="#missions">Missions</a></li>
+    <li><a href="#control">Control</a></li>
+    <li><a href="#academy">Academy</a></li>
+    <li><a href="#transmissions">Signals</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="coords reveal in">
+    25.4284° S, 49.2733° W — Curitiba, Brazil · UTC−03 <span class="blink">●</span> OPEN TO REMOTE / GLOBAL
+  </div>
+  <h1 class="reveal in">
+    Guilherme Iuri<br><span class="grad">de Barros</span>
+  </h1>
+  <p class="role reveal in" data-delay="1">
+    <b>CTO & Software Engineer</b> — I lead engineering teams and build the systems
+    they ship: <b>React, TypeScript, Node.js and Go</b> at the core, with event-driven
+    architecture, real-time data and a habit of <b>learning whatever the problem demands</b> —
+    from Web3 on Solana to machine learning.
+  </p>
+  <div class="cta-row reveal in" data-delay="2">
+    <a class="btn primary" href="https://github.com/guiliuri13" target="_blank" rel="noopener">View GitHub ↗</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/guilherme-iuri-de-barros/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn ghost" href="mailto:guilherme@tesserato.space">Send a signal</a>
+  </div>
+
+  <div class="telemetry" aria-hidden="true">
+    <span>EXP <b>6+ YRS</b></span>
+    <span>ROLE <b>CTO</b></span>
+    <span>STACK <b>TS / NODE / REACT / GO</b></span>
+    <span>ORBIT <b>LOGISTICS · REAL-TIME · ML · WEB3</b></span>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span class="pulse-line"></span> Initiate descent
+  </div>
+</header>
+
+<!-- ============ PROFILE ============ -->
+<section id="profile">
+  <div class="eyebrow reveal">01 · Mission profile</div>
+  <h2 class="reveal">Drawn to the problems<br><span class="dim">other people route around.</span></h2>
+  <div class="profile-grid">
+    <div>
+      <p class="reveal">For over <b>six years</b> I've shipped software end to end — from database schema
+      to pixel — and grown from engineer to <b>CTO</b>: today I own the technical direction,
+      the architecture decisions and the people who execute them.</p>
+      <p class="reveal" data-delay="1">My home base is <b>Carga Online Tecnologia</b>, a logistics-tech company where the
+      problems are the fun kind: <b>real-time tracking at scale</b>, multi-step freight workflows,
+      heavy third-party integrations and a data volume that punishes lazy architecture.</p>
+      <p class="reveal" data-delay="2">What defines me isn't a single stack — it's <b>velocity of learning</b>. When a project
+      needed blockchain, I went deep into Solana's TypeScript stack and shipped Web3 in production.
+      When it needed intelligence, I studied <b>machine learning and AI</b> and built working models. New territory is the part of the job
+      I look forward to.</p>
+    </div>
+    <div class="stats reveal" data-delay="1">
+      <div class="stat"><div class="num"><span data-count="6">0</span><em>+</em></div><div class="lbl">Years of flight</div></div>
+      <div class="stat"><div class="num"><span data-count="7">0</span><em>+</em></div><div class="lbl">Languages shipped</div></div>
+      <div class="stat"><div class="num"><span data-count="3">0</span><em>×</em></div><div class="lbl">Pair Extraordinaire</div></div>
+      <div class="stat"><div class="num"><span data-count="2">0</span><em>×</em></div><div class="lbl">Pull Shark</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECTRUM ============ -->
+<section id="spectrum">
+  <div class="eyebrow reveal">02 · Emission spectrum</div>
+  <h2 class="reveal">Every star reveals itself<br><span class="dim">by the light it emits.</span></h2>
+  <div class="spectrum-wrap reveal">
+    <div class="band">
+      <div class="band-label"><span>Languages</span><span class="nm">λ 380–450 nm</span></div>
+      <div class="lines">
+        <span class="sline" style="--c:#8B7CFF">TypeScript</span>
+        <span class="sline" style="--c:#8B7CFF">JavaScript</span>
+        <span class="sline" style="--c:#6FE7DD">Go</span>
+        <span class="sline" style="--c:#6FE7DD">Python</span>
+        <span class="sline" style="--c:#F5C76A">Lua</span>
+        <span class="sline" style="--c:#F5C76A">SQL</span>
+      </div>
+    </div>
+    <div class="band">
+      <div class="band-label"><span>Backend & Architecture</span><span class="nm">λ 450–530 nm</span></div>
+      <div class="lines">
+        <span class="sline" style="--c:#6FE7DD">Node.js</span>
+        <span class="sline" style="--c:#6FE7DD">AdonisJS</span>
+        <span class="sline" style="--c:#6FE7DD">NestJS</span>
+        <span class="sline" style="--c:#8B7CFF">Event-driven microservices</span>
+        <span class="sline" style="--c:#8B7CFF">REST + WebSocket</span>
+        <span class="sline" style="--c:#F5C76A">Queues & workers</span>
+        <span class="sline" style="--c:#F5C76A">CI/CD</span>
+        <span class="sline" style="--c:#F5C76A">Nginx · Linux</span>
+      </div>
+    </div>
+    <div class="band">
+      <div class="band-label"><span>Frontend & Mobile</span><span class="nm">λ 530–600 nm</span></div>
+      <div class="lines">
+        <span class="sline" style="--c:#8B7CFF">React</span>
+        <span class="sline" style="--c:#8B7CFF">React Native</span>
+        <span class="sline" style="--c:#6FE7DD">Next.js</span>
+        <span class="sline" style="--c:#6FE7DD">Redux · Zustand</span>
+        <span class="sline" style="--c:#F5C76A">Vite</span>
+        <span class="sline" style="--c:#F5C76A">Design systems</span>
+      </div>
+    </div>
+    <div class="band">
+      <div class="band-label"><span>Machine Learning & AI</span><span class="nm">λ 600–680 nm</span></div>
+      <div class="lines">
+        <span class="sline" style="--c:#8B7CFF">TensorFlow / TensorFlow.js</span>
+        <span class="sline" style="--c:#8B7CFF">scikit-learn</span>
+        <span class="sline" style="--c:#6FE7DD">Computer vision</span>
+        <span class="sline" style="--c:#F5C76A">LLM-assisted workflows</span>
+      </div>
+    </div>
+    <div class="band">
+      <div class="band-label"><span>Data & Quality</span><span class="nm">λ 680–750 nm</span></div>
+      <div class="lines">
+        <span class="sline" style="--c:#6FE7DD">PostgreSQL</span>
+        <span class="sline" style="--c:#6FE7DD">MySQL</span>
+        <span class="sline" style="--c:#8B7CFF">Redis</span>
+        <span class="sline" style="--c:#F5C76A">Cypress · Playwright (E2E)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSIONS ============ -->
+<section id="missions">
+  <div class="eyebrow reveal">03 · Mission log</div>
+  <h2 class="reveal">Flight history.</h2>
+  <div class="missions">
+    <article class="mission reveal">
+      <div class="when">Current mission</div>
+      <h3>CTO</h3>
+      <div class="org">Carga Online Tecnologia — logistics platform</div>
+      <p>Own the technology strategy and lead engineering on a full freight platform —
+      <b>quotation, real-time cargo tracking and document management</b> — built with React,
+      Node.js and PostgreSQL, handling massive data volumes with REST + WebSocket for live updates.</p>
+      <p>Architected the company's move toward <b>event-driven microservices</b>, including a
+      telemetry service that ingests truck data from third parties, normalizes it through
+      queue-based orchestration with <b>circuit breakers and Redis state</b>, and feeds a
+      driver-efficiency gamification engine — designed to expand into cargo scheduling without a rewrite.</p>
+      <div class="tags">
+        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span>
+        <span class="tag">Microservices</span><span class="tag">Event-driven</span><span class="tag">Redis</span><span class="tag">WebSocket</span>
+      </div>
+    </article>
+
+    <article class="mission reveal" data-delay="1">
+      <div class="when">Contract mission · Web3</div>
+      <h3>Blockchain Engineering</h3>
+      <div class="org">Solana Foundation ecosystem</div>
+      <p>Delivered Web3 work within the <b>Solana ecosystem</b>, built in <b>TypeScript</b> —
+      on-chain integrations, wallets and tokens through Solana's web toolchain. Picked up the
+      domain from zero to shipped, a pattern that repeats across my career:
+      <b>new territory, short ramp-up, production code</b>.</p>
+      <div class="tags">
+        <span class="tag">TypeScript</span><span class="tag">Solana</span><span class="tag">Web3</span><span class="tag">@solana/web3.js</span>
+      </div>
+    </article>
+
+    <article class="mission reveal" data-delay="2">
+      <div class="when">Contract mission · Public sector</div>
+      <h3>Government Platforms</h3>
+      <div class="org">Paraná State Dept. of Education · State Dept. of Economy</div>
+      <p>Built software for two government bodies — including the <b>Paraná State Department of
+      Education</b>, serving one of Brazil's largest public school networks. Public-sector work
+      means strict requirements, demanding stakeholders and zero tolerance for downtime —
+      exactly the environment where <b>requirement gathering and clear communication</b> decide
+      whether a project survives.</p>
+      <div class="tags">
+        <span class="tag">Public sector</span><span class="tag">Requirements engineering</span><span class="tag">Stakeholder management</span>
+      </div>
+    </article>
+
+    <article class="mission reveal" data-delay="3">
+      <div class="when">Ongoing operations</div>
+      <h3>Engineering Leadership & Delivery</h3>
+      <div class="org">Process · people · quality</div>
+      <p>Run sprint planning and delivery tracking, define <b>engineering KPIs beyond task counts</b>
+      (cross-referencing tasks with branches, commits and diff stats), and keep CI/CD pipelines and
+      branch conventions healthy across multiple repositories.</p>
+      <div class="tags">
+        <span class="tag">Team leadership</span><span class="tag">CI/CD</span><span class="tag">KPIs</span><span class="tag">Code review</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ MISSION CONTROL ============ -->
+<section id="control">
+  <div class="eyebrow reveal">04 · Mission control</div>
+  <h2 class="reveal">Rockets don't fly<br><span class="dim">on engines alone.</span></h2>
+  <div class="control-grid">
+    <div class="panel reveal">
+      <div class="orbit-ico"><span>RQ</span></div>
+      <h3>Requirements & Discovery</h3>
+      <p>I sit with clients and stakeholders to <b>extract what they actually need</b> — not what
+      they first ask for — and translate it into specs, flows and acceptance criteria
+      engineers can build against.</p>
+    </div>
+    <div class="panel reveal" data-delay="1">
+      <div class="orbit-ico"><span>FL</span></div>
+      <h3>Flows & Process Design</h3>
+      <p>From product flows to delivery pipelines: I design the <b>workflows, sprint structure and
+      branch conventions</b> that let a team ship predictably instead of heroically.</p>
+    </div>
+    <div class="panel reveal" data-delay="2">
+      <div class="orbit-ico"><span>TM</span></div>
+      <h3>Team Leadership</h3>
+      <p>Mentoring developers, running code review, resolving conflict into alignment.
+      A team that trusts its lead <b>moves faster than any framework</b> — building that trust
+      is part of my job description.</p>
+    </div>
+    <div class="panel reveal" data-delay="3">
+      <div class="orbit-ico"><span>Δv</span></div>
+      <h3>Rapid Adaptation</h3>
+      <p>Seven-plus languages across web, mobile, blockchain and ML — not collected for sport,
+      but because <b>each project demanded a new one and I delivered anyway</b>. Hard, unfamiliar
+      problems are what I signed up for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACADEMY ============ -->
+<section id="academy">
+  <div class="eyebrow reveal">05 · Academy</div>
+  <h2 class="reveal">Formal training,<br><span class="dim">continuous refueling.</span></h2>
+  <div class="academy-grid">
+    <div class="acad flagship reveal">
+      <div class="lvl">Flagship · In progress</div>
+      <h3>MBA in Software Engineering</h3>
+      <div class="inst">USP / ESALQ — University of São Paulo</div>
+      <p>Postgraduate engineering education at <b>Latin America's top-ranked university</b> —
+      a curriculum that mirrors what I already practice as CTO and sharpens it with academic rigor,
+      from low-level architecture decisions to leading teams through change.</p>
+      <div class="tags" style="margin-top:1.2rem">
+        <span class="tag">Clean Architecture</span>
+        <span class="tag">Domain-Driven Design</span>
+        <span class="tag">Design Patterns</span>
+        <span class="tag">Microservices & Serverless</span>
+        <span class="tag">Docker & Kubernetes</span>
+        <span class="tag">Cloud & Infra as Code</span>
+        <span class="tag">DevOps</span>
+        <span class="tag">Observability & Monitoring</span>
+        <span class="tag">TDD & Test Management</span>
+        <span class="tag">Event Storming</span>
+        <span class="tag">APIs & Message Queues</span>
+        <span class="tag">Micro-frontends</span>
+        <span class="tag">Mobile Architecture</span>
+        <span class="tag">SQL vs NoSQL</span>
+        <span class="tag">Information Security</span>
+        <span class="tag">Agile & Change Management</span>
+        <span class="tag">UX</span>
+      </div>
+    </div>
+    <div class="acad-side">
+      <div class="acad reveal" data-delay="1">
+        <div class="lvl">Degree</div>
+        <h3>B.Tech, Systems Analysis & Development</h3>
+        <div class="inst">Cruzeiro do Sul</div>
+        <p>Completed the full program and <b>graduated with honors</b>.</p>
+        <span class="honor">Graduated with honors</span>
+      </div>
+      <div class="acad reveal" data-delay="2">
+        <div class="lvl">Continuous</div>
+        <h3>Certification Track</h3>
+        <div class="inst">Alura + independent study</div>
+        <p>An ongoing trail of formal certificates across the stack — plus self-directed study in
+        <b>machine learning, AI and computer vision</b> that already produced working projects.</p>
+        <p style="margin-top:.8rem"><a class="cert-link" href="https://cursos.alura.com.br/user/guiliuri/fullCertificate/d01f46916e7e645ee4f572502de23f5c" target="_blank" rel="noopener">View full certificate record ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSMISSIONS ============ -->
+<section id="transmissions">
+  <div class="eyebrow reveal">06 · Transmissions</div>
+  <h2 class="reveal">Signals from <span class="dim">github.com/guiliuri13</span></h2>
+  <div class="gh-meta reveal">
+    <span class="badge"><b>16</b> public repos</span>
+    <span class="badge"><b>7+</b> languages</span>
+    <span class="badge">Pull Shark <b>×2</b></span>
+    <span class="badge">Pair Extraordinaire <b>×3</b></span>
+    <span class="badge">Quickdraw</span>
+  </div>
+  <div class="cards">
+    <a class="card reveal" href="https://github.com/guiliuri13/tensor-detector" target="_blank" rel="noopener">
+      <div class="id">TX-001 · Machine Learning</div>
+      <h3>Tensor Detector</h3>
+      <p>Browser-based object detection with TensorFlow — neural networks running in real time,
+      no backend required.</p>
+      <div class="lang">TypeScript · TensorFlow</div>
+    </a>
+    <a class="card reveal" data-delay="1" href="https://github.com/guiliuri13/finger-pose" target="_blank" rel="noopener">
+      <div class="id">TX-002 · Computer Vision</div>
+      <h3>Finger Pose</h3>
+      <p>Hand-pose estimation from a live camera feed — ML models reading finger positions
+      frame by frame.</p>
+      <div class="lang">JavaScript · ML</div>
+    </a>
+    <a class="card reveal" data-delay="2" href="https://github.com/guiliuri13/EmojIA-mirror" target="_blank" rel="noopener">
+      <div class="id">TX-003 · AI</div>
+      <h3>EmojIA Mirror</h3>
+      <p>A computer-vision experiment that reads facial expression and mirrors it back as emoji —
+      AI with a sense of humor.</p>
+      <div class="lang">TypeScript · Vision</div>
+    </a>
+    <a class="card reveal" href="https://github.com/guiliuri13/fivem_organizadas" target="_blank" rel="noopener">
+      <div class="id">TX-004 · Range</div>
+      <h3>FiveM Game Systems</h3>
+      <p>Multiplayer game-server systems scripted in Lua — proof that the stack adapts to the
+      problem, not the other way around.</p>
+      <div class="lang">Lua · JavaScript</div>
+    </a>
+    <a class="card reveal" data-delay="1" href="https://github.com/guiliuri13/React-News-Site" target="_blank" rel="noopener">
+      <div class="id">TX-005 · Full-stack</div>
+      <h3>React News Platform</h3>
+      <p>A news site originally built in PHP and rebuilt from the ground up in React — a hands-on
+      migration story across two eras of web development.</p>
+      <div class="lang">React · JavaScript</div>
+    </a>
+    <a class="card reveal" data-delay="2" href="https://github.com/guiliuri13/guiliuri13" target="_blank" rel="noopener">
+      <div class="id">TX-006 · Automation</div>
+      <h3>3D Contribution Skyline</h3>
+      <p>Profile repo that renders the GitHub contribution graph as a generated 3D night-view
+      skyline via Actions — small automation, done properly.</p>
+      <div class="lang">SVG · GitHub Actions</div>
+    </a>
+  </div>
+  <a class="all-signals reveal" href="https://github.com/guiliuri13?tab=repositories" target="_blank" rel="noopener">→ Scan all 16 signals in orbit</a>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="eyebrow reveal" style="justify-content:center">07 · Open a channel</div>
+  <h2 class="reveal">The universe is expanding.<br><span class="dim">So is my next challenge.</span></h2>
+  <p class="sub reveal" data-delay="1">Available for remote and international opportunities —
+  technical leadership, full-stack engineering, or the kind of problem nobody has solved yet.
+  Those are my favorite.</p>
+  <a class="mail reveal" data-delay="1" href="mailto:guilherme@tesserato.space">guilherme@tesserato.space</a>
+  <div class="links reveal" data-delay="2">
+    <a class="btn ghost" href="https://github.com/guiliuri13" target="_blank" rel="noopener">GitHub ↗</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/guilherme-iuri-de-barros/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn ghost" href="https://cursos.alura.com.br/user/guiliuri" target="_blank" rel="noopener">Certificates ↗</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  Transmitted from Curitiba, BR · <b>guiliuri13</b> · stars rendered live, no images harmed
+</footer>
+
+<script>
+/* ================= COSMOS: starfield + gravity lens + shooting stars ================= */
+(function(){
+  const canvas = document.getElementById('cosmos');
+  const ctx = canvas.getContext('2d');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W, H, dpr, stars = [], meteors = [];
+  const mouse = {x:-9999, y:-9999};
+  let scrollY = 0;
+
+  function resize(){
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W+'px'; canvas.style.height = H+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    buildStars();
+  }
+
+  function buildStars(){
+    stars = [];
+    const count = Math.min(420, Math.floor(W*H/4200));
+    for(let i=0;i<count;i++){
+      const depth = Math.random();
+      stars.push({
+        x: Math.random()*W,
+        y: Math.random()*H,
+        r: .4 + depth*1.5,
+        depth,
+        tw: Math.random()*Math.PI*2,
+        tws: .3 + Math.random()*1.4,
+        hue: Math.random()<.82 ? null : (Math.random()<.5 ? '139,124,255' : '111,231,221')
+      });
+    }
+  }
+
+  function spawnMeteor(){
+    if(reduced) return;
+    meteors.push({
+      x: Math.random()*W*1.1, y: -40,
+      vx: -(3+Math.random()*4), vy: 4+Math.random()*4,
+      life: 1
+    });
+  }
+
+  let t = 0;
+  function frame(){
+    t += .016;
+    ctx.clearRect(0,0,W,H);
+    const par = scrollY;
+
+    for(const s of stars){
+      let y = (s.y - par * s.depth * .35) % H; if(y<0) y+=H;
+      let x = (s.x + t * 2 * s.depth) % W;
+
+      const dx = x - mouse.x, dy = y - mouse.y;
+      const d2 = dx*dx + dy*dy;
+      if(d2 < 22500){
+        const d = Math.sqrt(d2) || 1;
+        const f = (150 - d)/150 * 26 * s.depth;
+        x += dx/d * f; y += dy/d * f;
+      }
+
+      const a = .25 + .75 * Math.abs(Math.sin(s.tw + t*s.tws)) * (.4 + s.depth*.6);
+      ctx.beginPath();
+      ctx.arc(x, y, s.r, 0, Math.PI*2);
+      ctx.fillStyle = s.hue ? `rgba(${s.hue},${a})` : `rgba(234,240,255,${a})`;
+      ctx.fill();
+      if(s.depth > .85){
+        ctx.beginPath();
+        ctx.arc(x, y, s.r*3, 0, Math.PI*2);
+        ctx.fillStyle = `rgba(139,124,255,${a*.08})`;
+        ctx.fill();
+      }
+    }
+
+    for(let i=meteors.length-1;i>=0;i--){
+      const m = meteors[i];
+      m.x += m.vx; m.y += m.vy; m.life -= .012;
+      if(m.life <= 0 || m.y > H+60){ meteors.splice(i,1); continue; }
+      const grad = ctx.createLinearGradient(m.x, m.y, m.x - m.vx*16, m.y - m.vy*16);
+      grad.addColorStop(0, `rgba(245,199,106,${m.life})`);
+      grad.addColorStop(1, 'rgba(245,199,106,0)');
+      ctx.strokeStyle = grad; ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(m.x, m.y);
+      ctx.lineTo(m.x - m.vx*16, m.y - m.vy*16);
+      ctx.stroke();
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  addEventListener('resize', resize, {passive:true});
+  addEventListener('scroll', ()=>{ scrollY = window.scrollY; }, {passive:true});
+  addEventListener('pointermove', e=>{ mouse.x=e.clientX; mouse.y=e.clientY; }, {passive:true});
+  addEventListener('pointerleave', ()=>{ mouse.x=-9999; mouse.y=-9999; });
+
+  resize();
+  if(reduced){
+    ctx.clearRect(0,0,W,H);
+    for(const s of stars){
+      ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle = `rgba(234,240,255,${.3+s.depth*.5})`; ctx.fill();
+    }
+  } else {
+    frame();
+    setInterval(spawnMeteor, 4200);
+  }
+})();
+
+/* ================= scroll progress ================= */
+(function(){
+  const bar = document.getElementById('trajectory');
+  const update = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max>0 ? (h.scrollTop/max)*100 : 0) + '%';
+  };
+  addEventListener('scroll', update, {passive:true});
+  update();
+})();
+
+/* ================= reveal on scroll ================= */
+(function(){
+  const io = new IntersectionObserver(entries=>{
+    for(const e of entries){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const ioLines = new IntersectionObserver(entries=>{
+    for(const e of entries){
+      if(!e.isIntersecting) continue;
+      const lines = e.target.querySelectorAll('.sline');
+      lines.forEach((l,i)=> setTimeout(()=>l.classList.add('in'), i*70));
+      ioLines.unobserve(e.target);
+    }
+  }, {threshold:.2});
+  document.querySelectorAll('.band').forEach(b=>ioLines.observe(b));
+})();
+
+/* ================= counters ================= */
+(function(){
+  const io = new IntersectionObserver(entries=>{
+    for(const e of entries){
+      if(!e.isIntersecting) continue;
+      const el = e.target, target = +el.dataset.count;
+      const t0 = performance.now(), dur = 1400;
+      (function tick(now){
+        const p = Math.min((now-t0)/dur, 1);
+        el.textContent = Math.round(target * (1-Math.pow(1-p,3)));
+        if(p<1) requestAnimationFrame(tick);
+      })(t0);
+      io.unobserve(el);
+    }
+  }, {threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+})();
+
+/* ================= card spotlight follows cursor ================= */
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('pointermove', e=>{
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', (e.clientX - r.left)+'px');
+    card.style.setProperty('--my', (e.clientY - r.top)+'px');
+  }, {passive:true});
+});
+</script>
+</body>
+</html>
